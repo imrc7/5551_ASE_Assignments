@@ -14,7 +14,6 @@ function home()
         {
             alert("Password and Confirm password should match");
         }
-
  else
      {
 
@@ -45,7 +44,6 @@ function login()
 else
 
             window.alert("Dear USER: Login failed. Invalid email or password");
-
 
 }
 
