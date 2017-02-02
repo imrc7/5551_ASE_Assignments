@@ -1,0 +1,21 @@
+input{
+
+    background-color:#F0FFFF;
+    width: 10%;
+    border: 2px solid black;
+    color: black;
+}
+body
+{
+    background:url("plain1.jpg");
+/*background-color: #F0FFFF;*/
+}
+
+.marquee{
+    text-decoration-color: #761c19;
+}
+
+from
+{
+    
+}
