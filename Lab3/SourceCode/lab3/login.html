@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="app.js"></script>
+</head>
+<body background="fi1.jpg">
+<div class="container">
+    <div class="login">
+        <h4>Mashup Login here</h4>
+        <!--<hr>-->
+        <form class="login-inner">
+            <input type="email" class="form-control email" id="email-input" placeholder="Enter email">
+            <input type="password" class="form-control password" id="password-input" placeholder="Enter Password">
+            <label class="checkbox-inline">
+                <input type="checkbox" id="remember" value="Remember me"> Remember me
+            </label>
+            <input class="btn btn-block btn-lg btn-success submit" type="button" value="Login" onclick="login()">
+        </form>
+        <!--<a href="register.html" class="btn btn-sm btn-primary register">Register</a>-->
+        <br>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+
+        <br>
+         <b> or </b>
+
+        <!--<div id="status">-->
+        <!--</div>-->
+
+        <div class="" width="1px">
+            <img src="ins.JPG" width="75px">
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // This is called with the results from from FB.getLoginStatus().
+    function statusChangeCallback(response) {
+        FB.api('me/permissions', 'delete', function (r1) {
+            // FB.login relies on FB.getLoginStatus.
+            // Force reloading the login status.
+            FB.getLoginStatus(function (r2) {
+                FB.login(function (r3) {});
+            }, true);
+        });
+
+        if (response.status === 'connected') {
+            // Logged into your app and Facebook.
+            testAPI();
+        } else if (response.status === 'not_authorized') {
+            // The person is logged into Facebook, but not your app.
+            document.getElementById('status').innerHTML = 'Please log ' +
+                'into this app.';
+        } else {
+            // The person is not logged into Facebook, so we're not sure if
+            // they are logged into this app or not.
+            document.getElementById('status').innerHTML = 'Please log ' +
+                'into Facebook.';
+        }
+    }
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '413681385644588',
+            cookie     : true,  // enable cookies to allow the server to access
+                                // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.8' // use graph api version 2.8
+        });
+
+        FB.api('me/permissions', 'delete', function (r1) {
+            // FB.login relies on FB.getLoginStatus.
+            // Force reloading the login status.
+            FB.getLoginStatus(function (r2) {
+                FB.login(function (r3) {});
+            }, true);
+        });
+
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+
+    };
+
+    // Load the SDK asynchronously
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    // Here we run a very simple test of the Graph API after login is
+    // successful.  See statusChangeCallback() for when this call is made.
+    function testAPI() {
+        FB.api('me/permissions', 'delete', function (r1) {
+            // FB.login relies on FB.getLoginStatus.
+            // Force reloading the login status.
+            FB.getLoginStatus(function (r2) {
+                FB.login(function (r3) {});
+            }, true);
+        });
+
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+            console.log('Successful login for: ' + response.name);
+            document.getElementById('status').innerHTML =
+                'Thanks for logging in, ' + response.name + '!';
+        });
+    }
+</script>
+<!--<script src="fly.js"></script>-->
+</body>
+</html>
