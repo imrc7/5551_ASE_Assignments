@@ -75,11 +75,6 @@ else{
 //        String password = passwordCtrl.getText().toString();
 //
 //        boolean validationFlag = false;
-//        //Verify if the username and password are not empty.
-//        if (!userName.isEmpty() && !password.isEmpty()) {
-//            if (userName.equals("rcww4@mail.umkc.edu") && password.equals("1234")) {
-//                validationFlag = true;
-//
 //            }
 //        }
 //        if (!validationFlag) {
@@ -91,14 +86,14 @@ else{
 //        }
 //
 //    }
-//    public void regPage(View v) {
-//        Intent redirect = new Intent(LogActivity.this, RegActivity.class);
-//        startActivity(redirect);
-//    }
-//
-////    public void mainPage(View v) {
-////        Intent redirect = new Intent(LogActivity.this, MainActivity.class);
-////        startActivity(redirect);
-////    }
-//
-//}
+        public void regPage(View v) {
+        Intent redirect = new Intent(LogActivity.this, RegActivity.class);
+        startActivity(redirect);
+    }
+
+    public void mainPage(View v) {
+        Intent redirect = new Intent(LogActivity.this, MainActivity.class);
+        startActivity(redirect);
+    }
+
+}
