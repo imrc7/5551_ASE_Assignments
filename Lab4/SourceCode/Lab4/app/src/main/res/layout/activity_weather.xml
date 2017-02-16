@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_weather"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.revan.lab4.WeatherActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherIconImageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/w2"
+        />
+
+
+    <TextView
+        android:text="Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conditionTextView"
+        android:layout_alignLeft="@+id/conditionTextView"
+        android:layout_alignStart="@+id/conditionTextView"
+        android:layout_marginTop="19dp"
+        android:id="@+id/locationTextView" />
+
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/purple"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    />
+
+    <TextView
+        android:text="Temperture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/temperatureTextView"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:typeface="serif"
+        android:layout_below="@+id/weatherIconImageView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/conditionTextView"
+        android:layout_below="@+id/temperatureTextView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationTextView"
+        android:layout_toLeftOf="@+id/locationTextView"
+        android:layout_toStartOf="@+id/locationTextView"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginTop="57dp"
+        android:id="@+id/button3" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button3"
+        android:layout_toRightOf="@+id/conditionTextView"
+        android:layout_toEndOf="@+id/conditionTextView"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:id="@+id/button4" />
+
+
+</RelativeLayout>
