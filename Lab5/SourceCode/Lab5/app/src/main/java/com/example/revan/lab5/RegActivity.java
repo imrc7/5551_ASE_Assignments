@@ -34,6 +34,16 @@ public class RegActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reg);
+
+  //Location manager for getting the address
+
+        LocationManager locationManager = (LocationManager)this. getSystemService(Context.LOCATION_SERVICE);
+        Geocoder g=new Geocoder(this);
+
+
+
+
+
         userImage = (ImageView) findViewById(R.id.imageView);
         ImageButton capture = (ImageButton) findViewById(R.id.imageButton);
         capture.setOnClickListener(new View.OnClickListener() {
