@@ -1,0 +1,63 @@
+/**
+ * font
+ */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(../fonts/roboto.woff) format('woff');
+}
+
+@mixin default-font {
+	font-family: 'Roboto Slab', serif;
+	font-weight:bold;	
+}
+
+
+body {
+	font-family: 'Roboto Slab', serif;
+}
+
+.bar .title , h2 , h3{
+	@include default-font;
+}
+
+.full-image {
+	width: 100%;
+	background: #f0f0f0;
+	height: 100%;
+}
+
+
+
+.player-container {
+	@include display-flex;
+	@include align-items(center);
+	padding:10px;
+
+	.player-controls {
+		font-size: 40px;
+		width: 50px;
+		text-align: center;
+	}	
+
+	.player-title {
+		@include flex;
+		h3 {
+			margin:0	;
+			margin-left: 10px;
+		}
+		
+	}
+}
+
+
+
+
+/*
+directives
+ */
+@import "app/track",
+	"app/result",
+	"app/browse",
+	"app/search";

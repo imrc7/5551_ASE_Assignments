@@ -1,0 +1,33 @@
+.item-list {
+	width: 100%;
+	height: 134px;
+	font-family: 'Roboto Slab', serif;
+}
+
+
+
+.track {
+	@include display-flex;
+	.track__container {
+		@include flex(1);
+		padding: 0 20px;
+		white-space: normal;
+
+	}
+	.track__title {
+		font-size: 19px;
+		
+	}
+
+	.track__username {
+		color: #707070;
+
+	}
+	.track__img {
+		width: 100px;
+
+		height: 100px;
+		background-color: #ddd;
+	}
+
+}
