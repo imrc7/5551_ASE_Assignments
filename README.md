@@ -10,3 +10,4 @@ Revanth Chakilam - class id 9 - st id 16241583
 5. Lab5 link https://github.com/revanthchakilam/5551_ASE_Assignments/wiki/Tutorial-Lab-5
 6. Lab6 link https://github.com/revanthchakilam/5551_ASE_Assignments/wiki/Tutorial-Lab-6
 7. Lab7 link https://github.com/revanthchakilam/5551_ASE_Assignments/wiki/Tutorial-Lab-7
+8. Lab8 link https://github.com/revanthchakilam/5551_ASE_Assignments/wiki/Tutorial-Lab-8
