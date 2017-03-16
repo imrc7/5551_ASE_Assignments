@@ -1,0 +1,29 @@
+<ion-view title="Login Here" id="page2" class="log" >
+    <ion-content padding="true" class="has-header">
+<!--        <button id="login-button4" class="button button-positive  button-block">Login with Facebook</button>-->
+        <form class="list">
+            <ion-list>
+                <label class="item item-input" style="background-color: transparent;">
+                    <span class="input-label">Email</span>
+                    <input type="text" placeholder="Enter the email id" ng-model="u.email" >
+                </label>
+                <label class="item item-input" style="background-color: transparent">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="Enter the password" ng-model="u.password">
+                </label>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <button ng-click="gotoHome()" id="login-button1" class="button button-block button-energized icon-right ion-navicon button-balanced button-block">Log in</button>
+<!--            <button id="login-button4" class="button button-positive  button-block">Login with Facebook</button>-->
+            <a ui-sref="plugin" id="login-button2" class="button button-energized  button-block button-clear">Forgot password ?</a>
+            <a ui-sref="register" id="login-button2" class="button button-energized  button-block button-clear">Or create a new  account by clicking here</a>
+            <div class="button-bar">
+  <a class="button button-outline button-energized">Like us</a>
+  <a class="button button-energized">Rate us</a>
+  <a class="button button-outline button-energized">About us</a>
+</div>
+        </form>
+        
+        
+    </ion-content>
+</ion-view>
