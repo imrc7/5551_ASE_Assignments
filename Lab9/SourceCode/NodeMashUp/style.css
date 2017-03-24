@@ -1,0 +1,15 @@
+html,body{
+    height: 100%;
+}
+table{
+    width: 100%;
+}
+.row{
+    margin-top: 20px;
+}
+
+.a{
+    float: right;
+    margin: 0;
+    margin-right: 70px;
+}
